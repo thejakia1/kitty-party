@@ -1,10 +1,10 @@
 {
   "name": "kitty-party",
   "displayName": "Kitty Party - Watermelon Themes & Dancing Cats",
-  "description": "Four watermelon color themes, plus an opt-in party of dancing cats, falling watermelon slices and playful editor decorations.",
+  "description": "Five watermelon color themes, plus an opt-in party of dancing cats, falling watermelon slices and playful editor decorations.",
   "author": "Jakia A.",
   "publisher": "thejakia1",
-   "version": "0.1.2",
+  "version": "0.1.4",
   "license": "MIT",
   "icon": "media/icon.png",
   "engines": {
@@ -31,9 +31,9 @@
   "contributes": {
     "themes": [
       {
-        "label": "Kitty Party: Watermelon Patch",
-        "uiTheme": "vs-dark",
-        "path": "./themes/watermelon-patch-color-theme.json"
+        "label": "Kitty Party: Melon Cream Rind",
+        "uiTheme": "vs",
+        "path": "./themes/melon-cream-rind-color-theme.json"
       },
       {
         "label": "Kitty Party: Melon Cream",
@@ -41,14 +41,19 @@
         "path": "./themes/melon-cream-color-theme.json"
       },
       {
+        "label": "Kitty Party: Garden Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/kitty-garden-color-theme.json"
+      },
+      {
         "label": "Kitty Party: Midnight Melon",
         "uiTheme": "vs-dark",
         "path": "./themes/midnight-melon-color-theme.json"
       },
       {
-        "label": "Kitty Party: Garden Theme",
+        "label": "Kitty Party: Watermelon Patch",
         "uiTheme": "vs-dark",
-        "path": "./themes/kitty-garden-color-theme.json"
+        "path": "./themes/watermelon-patch-color-theme.json"
       }
     ],
     "viewsContainers": {
@@ -177,15 +182,23 @@
       }
     }
   },
-  "scripts": {
+    "scripts": {
     "build:themes": "node scripts/build-themes.js",
     "build:assets": "node scripts/build-assets.js",
     "test": "node --test test/*.test.js",
-    "package": "npx --yes @vscode/vsce package --no-dependencies --allow-missing-repository"
+    "package": "npx --yes @vscode/vsce package --no-dependencies"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/thejakia1/kitty-party.git"
+  },
+  "homepage": "https://github.com/thejakia1/kitty-party#readme",
+  "bugs": {
+    "url": "https://github.com/thejakia1/kitty-party/issues"
+  },
+  "galleryBanner": {
+    "color": "#161340",
+    "theme": "dark"
   },
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2"

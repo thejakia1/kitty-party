@@ -1,6 +1,6 @@
 # Kitty Party
 
-Four watermelon color themes for VS Code, plus an opt-in party: dancing cats, falling watermelon slices, and small decorations in your editor.
+Five watermelon color themes for VS Code, plus an opt-in party: dancing cats, falling watermelon slices, and small decorations in your editor.
 
 The themes are always on once you pick one. The party is off until you start it.
 
@@ -8,12 +8,13 @@ The themes are always on once you pick one. The party is off until you start it.
 
 ## Themes
 
-| Theme | Type |
-| --- | --- |
-| Kitty Party: Watermelon Patch | Dark |
-| Kitty Party: Melon Cream | Light |
-| Kitty Party: Midnight Melon | Dark |
-| Kitty Party: Garden Theme | Dark |
+| Theme                         | Type  |
+| ----------------------------- | ----- |
+| Kitty Party: Melon Cream Rind | Light |
+| Kitty Party: Melon Cream      | Light |
+| Kitty Party: Garden Theme     | Dark  |
+| Kitty Party: Midnight Melon   | Dark  |
+| Kitty Party: Watermelon Patch | Dark  |
 
 Pick one with `Preferences: Color Theme`, or run **Kitty Party: Choose Watermelon Theme** from the Command Palette.
 
@@ -37,26 +38,26 @@ Animations respect your system's reduced-motion setting.
 
 ## Commands
 
-| Command | What it does |
-| --- | --- |
-| Kitty Party: Start or Stop Kitty Party | Toggle the party |
-| Kitty Party: More Melons | Raise the melon level (starts the party if it is off) |
-| Kitty Party: Fewer Melons | Lower the level. At level 1 this stops the party |
-| Kitty Party: Restore Editor (Stop Party) | Stop and clear all decorations |
-| Kitty Party: Open Large Kitty Party | Open the large panel |
-| Kitty Party: Choose Your Cat | Pick Mochi, Salem or Pudding |
-| Kitty Party: Choose Watermelon Theme | Pick one of the four themes |
+| Command                                  | What it does                                          |
+| ---------------------------------------- | ----------------------------------------------------- |
+| Kitty Party: Start or Stop Kitty Party   | Toggle the party                                      |
+| Kitty Party: More Melons                 | Raise the melon level (starts the party if it is off) |
+| Kitty Party: Fewer Melons                | Lower the level. At level 1 this stops the party      |
+| Kitty Party: Restore Editor (Stop Party) | Stop and clear all decorations                        |
+| Kitty Party: Open Large Kitty Party      | Open the large panel                                  |
+| Kitty Party: Choose Your Cat             | Pick Mochi, Salem or Pudding                          |
+| Kitty Party: Choose Watermelon Theme     | Pick one of the five themes                           |
 
 ## Settings
 
-| Setting | Default | Description |
-| --- | --- | --- |
-| `kittyParty.autoStart` | `false` | Start the party on first launch |
-| `kittyParty.defaultLevel` | `2` | Melon level when the party starts (1 to 5) |
-| `kittyParty.gutterCats` | `true` | Show your cat in the gutter |
-| `kittyParty.hoverMessages` | `true` | Show cat messages on hover |
+| Setting                      | Default | Description                                |
+| ---------------------------- | ------- | ------------------------------------------ |
+| `kittyParty.autoStart`       | `false` | Start the party on first launch            |
+| `kittyParty.defaultLevel`    | `2`     | Melon level when the party starts (1 to 5) |
+| `kittyParty.gutterCats`      | `true`  | Show your cat in the gutter                |
+| `kittyParty.hoverMessages`   | `true`  | Show cat messages on hover                 |
 | `kittyParty.celebrateOnSave` | `false` | Melon burst and status bar message on save |
-| `kittyParty.statusBar` | `true` | Show the status bar item |
+| `kittyParty.statusBar`       | `true`  | Show the status bar item                   |
 
 To turn the party off completely, run **Restore Editor (Stop Party)**. To use only the themes, never start it.
 
@@ -82,16 +83,16 @@ npm install
 
 Open the folder in VS Code and press **F5** to launch an Extension Development Host.
 
-| Script | What it does |
-| --- | --- |
+| Script                 | What it does                                                              |
+| ---------------------- | ------------------------------------------------------------------------- |
 | `npm run build:themes` | Regenerate `themes/*.json` from the palettes in `scripts/build-themes.js` |
-| `npm run build:assets` | Rebuild media assets |
-| `npm test` | Run the smoke tests |
-| `npm run package` | Build the `.vsix` |
+| `npm run build:assets` | Rebuild media assets                                                      |
+| `npm test`             | Run the smoke tests                                                       |
+| `npm run package`      | Build the `.vsix`                                                         |
 
 ### How it works
 
-- **Themes** are generated from one palette object per theme, so all four share the same set of workbench and syntax token rules. Edit a palette, run `build:themes`, and the JSON is rewritten.
+- **Themes** are generated from one palette object per theme, so all five share the same set of workbench and syntax token rules. Edit a palette, run `build:themes`, and the JSON is rewritten.
 - **Art** (cats, slices, melons, paws) is drawn as inline SVG in `src/art.js`. There are no image files for the characters.
 - **Editor decorations** are placed by hashing the file URI and line number (FNV-1a), so the same lines get the same decorations every time instead of jumping around on each refresh. Only visible lines are processed, and refreshes are debounced.
 - **Webviews** use a strict Content Security Policy with nonces and no inline style attributes.
