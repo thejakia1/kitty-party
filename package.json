@@ -1,0 +1,193 @@
+{
+  "name": "kitty-party",
+  "displayName": "Kitty Party - Watermelon Themes & Dancing Cats",
+  "description": "Four watermelon color themes, plus an opt-in party of dancing cats, falling watermelon slices and playful editor decorations.",
+  "author": "Jakia A.",
+  "publisher": "thejakia1",
+   "version": "0.1.2",
+  "license": "MIT",
+  "icon": "media/icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes",
+    "Other"
+  ],
+  "keywords": [
+    "theme",
+    "watermelon",
+    "cat",
+    "kitty",
+    "party",
+    "fun",
+    "pink",
+    "color-theme"
+  ],
+  "main": "./src/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Kitty Party: Watermelon Patch",
+        "uiTheme": "vs-dark",
+        "path": "./themes/watermelon-patch-color-theme.json"
+      },
+      {
+        "label": "Kitty Party: Melon Cream",
+        "uiTheme": "vs",
+        "path": "./themes/melon-cream-color-theme.json"
+      },
+      {
+        "label": "Kitty Party: Midnight Melon",
+        "uiTheme": "vs-dark",
+        "path": "./themes/midnight-melon-color-theme.json"
+      },
+      {
+        "label": "Kitty Party: Garden Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/kitty-garden-color-theme.json"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "kittyParty",
+          "title": "Kitty Party",
+          "icon": "media/cat.svg"
+        }
+      ]
+    },
+    "views": {
+      "kittyParty": [
+        {
+          "type": "webview",
+          "id": "kittyParty.panel",
+          "name": "Meow Business",
+          "icon": "media/cat.svg"
+        }
+      ],
+      "explorer": [
+        {
+          "type": "webview",
+          "id": "kittyParty.explorer",
+          "name": "Kitty Party",
+          "icon": "media/cat.svg",
+          "visibility": "collapsed"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "kittyParty.toggle",
+        "title": "Start or Stop Kitty Party",
+        "category": "Kitty Party",
+        "icon": "$(play-circle)"
+      },
+      {
+        "command": "kittyParty.moreMelons",
+        "title": "More Melons",
+        "category": "Kitty Party",
+        "icon": "$(add)"
+      },
+      {
+        "command": "kittyParty.fewerMelons",
+        "title": "Fewer Melons",
+        "category": "Kitty Party",
+        "icon": "$(remove)"
+      },
+      {
+        "command": "kittyParty.restore",
+        "title": "Restore Editor (Stop Party)",
+        "category": "Kitty Party",
+        "icon": "$(discard)"
+      },
+      {
+        "command": "kittyParty.openLarge",
+        "title": "Open Large Kitty Party",
+        "category": "Kitty Party"
+      },
+      {
+        "command": "kittyParty.chooseCat",
+        "title": "Choose Your Cat",
+        "category": "Kitty Party"
+      },
+      {
+        "command": "kittyParty.chooseTheme",
+        "title": "Choose Watermelon Theme",
+        "category": "Kitty Party"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "kittyParty.toggle",
+          "when": "view == kittyParty.explorer || view == kittyParty.panel",
+          "group": "navigation@1"
+        },
+        {
+          "command": "kittyParty.fewerMelons",
+          "when": "view == kittyParty.explorer || view == kittyParty.panel",
+          "group": "navigation@2"
+        },
+        {
+          "command": "kittyParty.moreMelons",
+          "when": "view == kittyParty.explorer || view == kittyParty.panel",
+          "group": "navigation@3"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Kitty Party",
+      "properties": {
+        "kittyParty.autoStart": {
+          "type": "boolean",
+          "default": false,
+          "description": "Start the party automatically on first launch. Decorations never change your files."
+        },
+        "kittyParty.defaultLevel": {
+          "type": "number",
+          "default": 2,
+          "minimum": 1,
+          "maximum": 5,
+          "description": "Melon level used the first time the party starts (1 = a few slices, 5 = full party)."
+        },
+        "kittyParty.gutterCats": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show your chosen cat in the editor gutter on some lines while the party is on."
+        },
+        "kittyParty.hoverMessages": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show a short message from your cat when you hover a decoration."
+        },
+        "kittyParty.celebrateOnSave": {
+          "type": "boolean",
+          "default": false,
+          "description": "Throw a small celebration (status bar message and a burst of melons) when you save a file."
+        },
+        "kittyParty.statusBar": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show the Kitty Party item in the status bar."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build:themes": "node scripts/build-themes.js",
+    "build:assets": "node scripts/build-assets.js",
+    "test": "node --test test/*.test.js",
+    "package": "npx --yes @vscode/vsce package --no-dependencies --allow-missing-repository"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thejakia1/kitty-party.git"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2"
+  }
+}

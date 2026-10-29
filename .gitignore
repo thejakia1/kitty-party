@@ -1,0 +1,13 @@
+node_modules/
+*.vsix
+.vscode-test/
+out/
+dist/
+*.log
+*.bak
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
