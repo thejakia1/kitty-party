@@ -12,6 +12,7 @@
 - New light theme, **Melon Cream Rind**: cream editor, green title bar and activity bar, red status bar
 - Now five themes. The theme picker lists them in this order: Melon Cream Rind, Melon Cream, Garden Theme, Midnight Melon, Watermelon Patch
 - Better contrast for comments, borders and side panels. Code text is at least 4.5:1 against the editor background in all five themes
+- Terminal is themed: the terminal background matches the panel and each theme sets its own ANSI colors
 
 ### Fixed
 

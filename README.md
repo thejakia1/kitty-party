@@ -4,6 +4,8 @@ Five watermelon color themes for VS Code, plus an opt-in party: dancing cats, fa
 
 The themes are always on once you pick one. The party is off until you start it.
 
+![Kitty Party demo](media/demo.gif)
+
 ![Kitty Party preview](media/preview.png)
 
 ## Themes
@@ -18,8 +20,20 @@ The themes are always on once you pick one. The party is off until you start it.
 
 Pick one with `Preferences: Color Theme`, or run **Kitty Party: Choose Watermelon Theme** from the Command Palette.
 
-<!-- Add one screenshot per theme here, e.g.
-![Watermelon Patch](media/watermelon-patch.png) -->
+### Melon Cream Rind
+![Melon Cream Rind](media/melon-cream-rind.png)
+
+### Melon Cream
+![Melon Cream](media/melon-cream.png)
+
+### Garden Theme
+![Garden Theme](media/garden-theme.png)
+
+### Midnight Melon
+![Midnight Melon](media/midnight-melon.png)
+
+### Watermelon Patch
+![Watermelon Patch](media/watermelon-patch.png)
 
 ## The party
 
@@ -113,8 +127,8 @@ test/            smoke tests
 
 ## Roadmap
 
-- [ ] Screenshots for every theme
-- [ ] Demo GIF
+- [x] Screenshots for every theme
+- [x] Demo GIF
 - [ ] Marketplace and Open VSX release
 - [ ] More cats
 

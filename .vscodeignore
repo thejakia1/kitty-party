@@ -6,3 +6,9 @@ node_modules/**
 .gitignore
 media/preview.png
 package-lock.json
+media/melon-cream-rind.png
+media/melon-cream.png
+media/garden-theme.png
+media/midnight-melon.png
+media/watermelon-patch.png
+media/demo.gif
