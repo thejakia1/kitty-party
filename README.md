@@ -1,5 +1,7 @@
 # Kitty Party
 
+[![Marketplace](https://img.shields.io/visual-studio-marketplace/v/thejakia1.kitty-party?label=Marketplace)](https://marketplace.visualstudio.com/items?itemName=thejakia1.kitty-party)
+
 Five watermelon color themes for VS Code, plus an opt-in party: dancing cats, falling watermelon slices, and small decorations in your editor.
 
 The themes are always on once you pick one. The party is off until you start it.
@@ -83,7 +85,13 @@ To turn the party off completely, run **Restore Editor (Stop Party)**. To use on
    code --install-extension kitty-party-x.y.z.vsix
    ```
 
-**From the Marketplace:** coming soon.
+**From the Marketplace:**
+
+1. Open VS Code, press `Ctrl+P`, and run:
+   ```
+   ext install thejakia1.kitty-party
+   ```
+2. Or open it on the [Marketplace page](https://marketplace.visualstudio.com/items?itemName=thejakia1.kitty-party) and click Install.
 
 ## Contributing
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.5 - 2026-10-31
+
+- Now on the VS Code Marketplace. README has the Marketplace link, badge and install instructions
+
 ## 0.1.4 - 2026-10-29
 
 ### Themes

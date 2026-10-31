@@ -4,7 +4,7 @@
   "description": "Five watermelon color themes, plus an opt-in party of dancing cats, falling watermelon slices and playful editor decorations.",
   "author": "Jakia A.",
   "publisher": "thejakia1",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "license": "MIT",
   "icon": "media/icon.png",
   "engines": {
@@ -182,7 +182,7 @@
       }
     }
   },
-    "scripts": {
+  "scripts": {
     "build:themes": "node scripts/build-themes.js",
     "build:assets": "node scripts/build-assets.js",
     "test": "node --test test/*.test.js",
